@@ -55,7 +55,7 @@ let i = 30,
   a = 3,
   b = 3;
 
-const interval = setInterval(ballMove, 1);
+const interval = setInterval(ballMove, 10);
 
 function ballMove() {
   ball.style.transform = `translate(${i}px,${j}px)`;
