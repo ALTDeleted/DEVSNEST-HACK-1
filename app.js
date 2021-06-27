@@ -1,5 +1,5 @@
 const ball = document.querySelector(".ball");
-const cont = document.querySelector(".container");
+const cont = document.querySelector(".lion");
 const ship = document.querySelector(".ship");
 const blocks = document.querySelectorAll(".block");
 
@@ -7,29 +7,30 @@ let validBlocks = [];
 
 console.log(blocks);
 
-blocks.forEach((block,index)=>{
+blocks.forEach((block)=>{
   validBlocks.push({
     "x1":block.getBoundingClientRect().x,
     "y1":block.getBoundingClientRect().y,
-    "x2":block.offsetWidth+block.getBoundingClientRect().x,
-    "y2":block.offsetHeight+block.getBoundingClientRect().y,
+    "x2":block.getBoundingClientRect().width,
+    "y2":block.getBoundingClientRect().height,
+    "element":block,
   })
-
 })
 
-validBlocks.forEach(block=>{
-  const el = document.createElement("div");
-  el.style.backgroundColor = "cyan";
-  el.style.zIndex = "4";
+validBlocks.splice(validBlocks.length-1,1);
 
-  el.style.position = "absolute";
-  el.style.top = block.x1;
-  el.style.left = block.y1;
-  el.style.width = block.x2-block.x1;
-  el.style.height = block.y2-block.y1;
+// validBlocks.forEach(block=>{
+//   const el = document.createElement("div");
+//   el.style.background="black";
+//   el.style.position = "absolute";
+//   el.style.left = `${block.x1}px`;
+//   el.style.top = `${block.y1}px`;
+//   el.style.width = `${block.x2}px`;
+//   el.style.height = `${block.y2}px`;
+//   console.log(el);
 
-
-})
+//   document.body.appendChild(el);
+// })
 
 console.log(validBlocks)
 
@@ -41,25 +42,23 @@ let shipCordinate = null;
 let i = 30,
   j = 30,
   a = 3,
-  b = 3;
+  b = -3;
 
 const interval = setInterval(ballMove, 1);
 
 function ballMove() {
   ball.style.transform = `translate(${i}px,${j}px)`;
 
-  Array.from(blocks).map((block)=>{
-    if(i<=block.offsetLeft && i>=block.offsetRight)
-      console.log(block.offsetRight)
-  })
   i += a;
   j += b;
+
   if (i >= Xend - 20 || i <= 20) a = -a;
   if (j <= 20) b = -b;
 
   if (j >= Yend) {
-    clearInterval(interval);
-    setTimeout("location.reload(true);", 50);
+    b=-b;
+    // clearInterval(interval);
+    // setTimeout("location.reload(true);", 50);
   }
   if (
     shipCordinate &&
@@ -68,10 +67,27 @@ function ballMove() {
     shipCordinate.y <= j + 33
   )
     b = -b;
+
+    if(!validBlocks.length){
+      window.alert("i");
+      clearInterval(interval);
+    }
  
+    validBlocks.map((block,index)=>{
+      if(i>=block.x1 && i<=block.x2+block.x1 && j>=block.y1 && j<=block.y2+block.y1 )
+        {
+          block.element.style.backgroundColor = "rgba(0,0,0,0)";
+          b = -b;
+          a=-a
+          validBlocks.splice(index,1);
+          console.log(validBlocks.length)
+        }
+    })
+
+    
 }
 
-cont.addEventListener("mousemove", function (e) {
+document.body.addEventListener("mousemove", function (e) {
   shipCordinate = ship.getBoundingClientRect();
   ship.style.left = `${e.clientX - 50}px`;
 });
