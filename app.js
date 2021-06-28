@@ -1,11 +1,10 @@
 const ball = document.querySelector(".ball");
-const cont = document.querySelector(".lion");
 const ship = document.querySelector(".ship");
 const blocks = document.querySelectorAll(".block");
 
 let validBlocks = [];
 
-console.log(blocks);
+// console.log(blocks);
 
 blocks.forEach((block)=>{
   validBlocks.push({
@@ -39,32 +38,29 @@ const Yend = window.innerHeight;
 let shipCordinate = null;
 // console.log(Xend, Yend);
 
-let i = 30,
-  j = 30,
-  a = 3,
-  b = -3;
+let i = 800,
+  j = 800,
+  a =2,
+  b = -2;
 
 const interval = setInterval(ballMove, 1);
 
 function ballMove() {
   ball.style.transform = `translate(${i}px,${j}px)`;
 
-  i += a;
-  j += b;
-
-  if (i >= Xend - 20 || i <= 20) a = -a;
+  if (i >= 0.8*Xend || i <= 0.2*Xend) a = -a;
   if (j <= 20) b = -b;
 
   if (j >= Yend) {
     b=-b;
-    // clearInterval(interval);
-    // setTimeout("location.reload(true);", 50);
+    clearInterval(interval);
+    setTimeout("location.reload(true);", 50);
   }
   if (
     shipCordinate &&
-    i >= shipCordinate.x - 10 &&
-    i <= shipCordinate.x + 110 &&
-    shipCordinate.y <= j + 33
+    i >= shipCordinate.x + 30 &&
+    i <= shipCordinate.x + 70 &&
+    shipCordinate.y  <= j +30
   )
     b = -b;
 
@@ -76,7 +72,7 @@ function ballMove() {
     validBlocks.map((block,index)=>{
       if(i>=block.x1 && i<=block.x2+block.x1 && j>=block.y1 && j<=block.y2+block.y1 )
         {
-          block.element.style.backgroundColor = "rgba(0,0,0,0)";
+          block.element.classList.add("trans")
           b = -b;
           a=-a
           validBlocks.splice(index,1);
@@ -84,6 +80,8 @@ function ballMove() {
         }
     })
 
+    i += a;
+    j += b;
     
 }
 

@@ -1,201 +1,62 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-.ship {
-  position: absolute;
-  width: 150px;
-  height: 30px;
-  background-color: #ee3;
-  bottom: 50px;
-  left: 50px;
-}
-
-.block{
+:root{
+    --blue: #1e90ff;
+    --yellow:rgb(255, 196, 0);
+    --orange:rgb(255, 60, 0);
+    --byellow:rgb(255, 230, 0);
+    --borange:rgb(255, 145, 0);
+    --greyish:rgb(218, 133, 100);
+  }
   
-}
-body {
-  overflow: hidden;
-}
-.container {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgb(223, 147, 147);
-}
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
 
-.ball {
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: red;
-}
+  body {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
 
-.lion {
-  position: absolute;
-  width:800px;
-  height: 800px;
-  display: grid;
-  gap:5px;
-  grid-template-columns: repeat(1fr,20);
-  grid-template-rows: repeat(1fr,20);
-  border: solid 1px black;
-  margin-top:-100px;
-  left: 30%;
-  background-color: rgb(211, 211, 211);
-}
+  .leftCol,.rightCol{
+    position:absolute;
+    top:0;
+    left:0;
+    width:20vw;
+    height:100vh;
+    border-right:4px solid #1e90ff;
+    background-image: url("assets/rain2.gif");
+    background-size: cover;
+  
+  }
+  
+  .rightCol{
+    left:80vw;
+    border-left: 4px solid #1e90ff;
+    border-right: none;
+  }
+  
+  .container {
+    width: 60vw;
+    height: 100vh;
+    background-color: #020f1fe7;
+    background-image: url("./assets/back.gif");
+    background-repeat: no-repeat;
+    background-size: 60vw 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-around;
+    padding: 200px 100px;
+  }
 
-
-#a{
-  grid-column: 5/8;
-  grid-row: 5/6;
-  background-color: rgb(255, 196, 0);
-}
-/*  */
-#b{
-  grid-column: 5/9;
-  grid-row: 6/7;
-  background-color: rgb(255, 196, 0);
-}
-/*  */
-#c{
-  grid-column: 3/6;
-  grid-row: 7/8;
-  background-color: rgb(255, 230, 0);
-}
-
-#d{
-  grid-column: 6/10;
-  grid-row: 7/8;
-  background-color: rgb(255, 60, 0);
-}
-/*  */
-#e{
-  grid-column: 3/4;
-  grid-row: 8/9;
-  background-color: rgb(255, 230, 0);
-}
-#f{
-  grid-column: 4/5;
-  grid-row: 8/9;
-  background-color: rgb(36, 37, 37);
-}
-#g{
-  grid-column: 5/7;
-  grid-row: 8/9;
-  background-color: rgb(255, 60, 0);
-}
-#h{
-  grid-column: 7/10;
-  grid-row: 8/9;
-  background-color: rgb(255, 230, 0);
-}
-#i{
-  grid-column: 10/17;
-  grid-row: 8/9;
-  background-color: rgb(255, 145, 0);
-}
-/*  */
-#j{
-  grid-column: 2/5;
-  grid-row: 9/10;
-  background-color: rgb(255, 60, 0);
-}
-#k{
-  grid-column: 5/9;
-  grid-row: 9/10;
-  background-color: rgb(255, 230, 0);
-}
-#l{
-  grid-column: 9/18;
-  grid-row: 9/10;
-  background-color: rgb(255, 145, 0);
-}
-/*  */
-#m{
-  grid-column: 2/5;
-  grid-row: 10/11;
-  background-color: rgb(255, 60, 0);
-}
-#n{
-  grid-column: 5/9;
-  grid-row: 10/11;
-  background-color: rgb(255, 230, 0);
-}
-#o{
-  grid-column: 9/18;
-  grid-row: 10/11;
-  background-color: rgb(255, 145, 0);
-}
-/*  */
-#p{
-  grid-column: 5/9;
-  grid-row: 11/12;
-  background-color: rgb(255, 230, 0);
-}
-#q{
-  grid-column: 9/18;
-  grid-row: 11/12;
-  background-color: rgb(255, 145, 0);
-}
-/*  */
-#r{
-  grid-column: 5/9;
-  grid-row: 12/13;
-  background-color: rgb(255, 230, 0);
-}
-#s{
-  grid-column: 9/10;
-  grid-row: 12/13;
-  background-color:  rgb(255, 60, 0);
-}
-#t{
-  grid-column: 13/15;
-  grid-row: 12/13;
-  background-color:  rgb(255, 60, 0);
-}
-#u{
-  grid-column: 16/18;
-  grid-row: 12/13;
-  background-color:  rgb(255, 60, 0);
-}
-/*  */
-#v{
-  grid-column: 4/6;
-  grid-row: 13/14;
-  background-color:  rgb(255, 60, 0);
-}
-#w{
-  grid-column: 8/10;
-  grid-row: 13/16;
-  background-color:  rgb(255, 60, 0);
-}
-#x{
-  grid-column: 12/15;
-  grid-row: 13/14;
-  background-color:  rgb(255, 60, 0);
-}
-#y{
-  grid-column: 16/18;
-  grid-row: 13/16;
-  background-color:  rgb(255, 60, 0);
-}
-#z{
-  grid-column: 7/8;
-  grid-row: 15/16;
-  background-color:  rgb(255, 60, 0);
-}
-#a1{
-  grid-column: 15/16;
-  grid-row: 15/16;
-  background-color:  rgb(255, 60, 0);
-}
-/*  */
-#a2{
-  grid-column: 19/20;
-  grid-row: 19/20;
-  background-color:  rgba(255, 255, 255, 0);
-}
+  .container>div{
+      width: 100px;
+      height:100px;
+      margin: 100px;
+      background-color: rgb(5, 34, 58);
+      text-align: center;
+      align-items: center;
+  }
