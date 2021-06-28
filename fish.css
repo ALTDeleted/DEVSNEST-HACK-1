@@ -84,8 +84,8 @@
 
   .fish {
     position: absolute;
-    width:35vw;
-    height: 30vw;
+    width:40vw;
+    height: 32vw;
     display: grid;
     gap:5px;
     grid-template-columns: repeat(1fr,20);
@@ -93,7 +93,7 @@
     border: solid 1px black;
     margin-top:-70px;
     left: 20vw;
-    margin-left:150px;
+    margin-left:100px;
     margin-right:200px;
   }
   

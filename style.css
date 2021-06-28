@@ -52,11 +52,19 @@
     padding: 200px 100px;
   }
 
-  .container>div{
+  .container>a{
       width: 100px;
       height:100px;
       margin: 100px;
-      background-color: rgb(5, 34, 58);
-      text-align: center;
+      background-color: rgb(37, 37, 37);
+      display: flex;
+      justify-content: center;
       align-items: center;
+      text-decoration: none;
+      color: beige;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      border-radius: 8px;
+      font-weight: 600;
+      background-image: url("./assets/ship.png");
+      background-size: cover;
   }
