@@ -130,150 +130,203 @@
     grid-column: 7/11;
     grid-row: 3/4;
     background-color: #FD3D6C;
+  box-shadow:0 0 20px #FD3D6C;
+
   }
   /*  */
   #b{
     grid-column: 7/8;
     grid-row: 4/5;
-    background-color:#FD3D6C; 
+    background-color:#FD3D6C;
+  box-shadow:0 0 20px #FD3D6C;
+
   }
   /*  */
   #c{
     grid-column: 8/10;
     grid-row: 4/5;
+    box-shadow:0 0 20px #C4C4C4 ;
     background-color:#C4C4C4 ;
   }
   
   #d{
     grid-column: 10/11;
     grid-row: 4/5;
-    background-color: #FD3D6C; 
+    background-color: #FD3D6C;
+  box-shadow:0 0 20px #FD3D6C;
+
   }
   /*  */
   #e{
     grid-column: 6/8;
     grid-row: 5/7;
     background-color: #FA954C;
+    box-shadow:0 0 20px #FA954C;
+
   }
   #f{
     grid-column: 9/10;
     grid-row: 5/6;
     background-color:#C4C4C4;
+    box-shadow:0 0 20px #C4C4C4;
+
   }
   #g{
     grid-column: 10/11;
       grid-row: 5/6;
     background-color: #FD3D6C;
+    box-shadow:0 0 20px #FD3D6C;
+
   }
   #h{
     grid-column: 8/10;
     grid-row: 6/7;
     background-color:#C4C4C4 ;
+    box-shadow:0 0 20px #C4C4C4 ;
+
   }
   #i{
     grid-column: 10/11;
     grid-row: 6/9;
     background-color: #FD3D6C;
+    box-shadow:0 0 20px #FD3D6C;
+
   }
   /*  */
   #j{
     grid-column: 6/7;
     grid-row: 7/8;
     background-color:#FA954C ;
+    box-shadow:0 0 20px #FA954C ;
+
   }
   #k{
     grid-column: 7/10;
     grid-row: 7/8;
     background-color: #FD3D6C;
+    box-shadow:0 0 20px #FD3D6C;
+
   }
   #l{
     grid-column: 8/10;
     grid-row: 8/9;
     background-color:#FD3D6C ;
+    box-shadow:0 0 20px #FD3D6C ;
   }
   /*  */
   #m{
     grid-column: 11/12;
     grid-row: 8/9;
     background-color:#FD3D6C ;
+    box-shadow:0 0 20px #FD3D6C ;
+
   }
   #n{
     grid-column: 7/10;
     grid-row: 9/10;
     background-color: #FD3D6C;
+    box-shadow:0 0 20px #FD3D6C;
+
   }
   #o{
     grid-column: 10/12;
     grid-row: 9/10;
     background-color: #F4ED34;
+    box-shadow:0 0 20px  #F4ED34;
+
   }
   /*  */
   #p{
     grid-column: 7/11;
     grid-row: 10/11;
     background-color:#FD3D6C ;
+    box-shadow:0 0 20px #FD3D6C ;
+
   }
   #q{
     grid-column: 11/13;
     grid-row: 10/11;
     background-color: #F4ED34;
+    box-shadow:0 0 20px #F4ED34;
+
   }
   /*  */
   #r{
     grid-column: 7/11;
     grid-row: 11/12;
     background-color: #FD3D6C;
+    box-shadow:0 0 20px #FD3D6C;
+
   }
   #s{
     grid-column: 11/13;
     grid-row: 11/12;
     background-color:#F4ED34 ;
+    box-shadow:0 0 20px #F4ED34 ;
+
   }
   #t{
     grid-column: 7/11;
     grid-row: 12/13;
     background-color: #FD3D6C ;
+    box-shadow:0 0 20px #FD3D6C ;
+
   }
   #u{
     grid-column: 11/14;
     grid-row: 12/13;
     background-color:  #3BA9FE;
+    box-shadow:0 0 20px #3BA9FE;
+
   }
   /*  */
   #v{
     grid-column: 8/11;
     grid-row: 13/14;
     background-color: #FD3D6C ;
+    box-shadow:0 0 20px #FD3D6C ;
+
   }
   #w{
     grid-column: 11/13;
     grid-row: 13/14;
     background-color:#A21DFF;
+    box-shadow:0 0 20px #A21DFF; 
+
   }
   #x{
     grid-column: 13/14;
     grid-row: 13/14;
     background-color:  #3BA9FE;
+    box-shadow:0 0 20px #3BA9FE;
+
   }
   #y{
     grid-column: 7/8;
     grid-row: 14/15;
     background-color: #FA954C;
+    box-shadow:0 0 20px #FA954C;
+
   }
   #z{
     grid-column: 9/12;
     grid-row: 14/15;
     background-color:  #FD3D6C;
+    box-shadow:0 0 20px   #FD3D6C;
+
   }
   #a1{
     grid-column: 12/15;
     grid-row: 14/15;
     background-color:  #A21DFF;
+    box-shadow:0 0 20px #A21DFF;
+
   }
   #a2{
     grid-column: 8/11;
     grid-row: 15/16;
     background-color:  #FA954C;
+    box-shadow:0 0 20px #FA954C;;
   }
   
   #az{
@@ -286,12 +339,14 @@
     grid-column: 13/15;
     grid-row: 15/16;
     background-color: #9EFF34;
+    box-shadow:0 0 20px #9EFF34;
   }
   
   #az2{
     grid-column: 13/15;
     grid-row: 16/17;
     background-color: #9EFF34;
+    box-shadow:0 0 20px #9EFF34;
   
   }
   
@@ -300,6 +355,6 @@
     grid-column: 14/15;
     grid-row: 17/18;
     background-color: #9EFF34;
-  
+    box-shadow:0 0 20px #9EFF34;
   
   }
