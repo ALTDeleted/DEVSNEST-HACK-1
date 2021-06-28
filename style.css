@@ -6,12 +6,13 @@
     --borange:rgb(255, 145, 0);
     --greyish:rgb(218, 133, 100);
   }
-  
+
   * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
   }
+
 
   body {
     overflow: hidden;
@@ -22,7 +23,6 @@
     background-image: url("./assets/back.gif");
     background-repeat: no-repeat;
     background-size: cover;
-
   }
 
   .audio{
@@ -47,13 +47,13 @@
     color: #6e12d8;
     text-shadow:5px 10px 2px rgb(224, 21, 214);
   }
-  
+
   .home{
     width: 40px;
     height: 40px;
     left:80px;
   }
-  
+
   .leftCol,.rightCol{
     position:absolute;
     top:0;
@@ -63,15 +63,15 @@
     border-right:4px solid #1e90ff;
     background-image: url("assets/rain2.gif");
     background-size: cover;
-  
+
   }
-  
+
   .rightCol{
     left:80vw;
     border-left: 4px solid #1e90ff;
     border-right: none;
   }
-  
+
   .container {
     width: 60vw;
     height: 100vh;

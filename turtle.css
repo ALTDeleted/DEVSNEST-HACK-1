@@ -13,7 +13,6 @@
     box-sizing: border-box;
   }
 
-
   .audio{
     width: 40px;
     height: 40px;
@@ -50,8 +49,8 @@
     border-right: none;
     display: flex;
     justify-content: center;
-  
   }
+  
   .rightCol > h1 {
     color:blue;
     font-family: "Luckiest guy", cursive;
@@ -124,7 +123,9 @@
 
   .turtle {
     width:35vw;
+    min-width: 600px;
     height: 30vw;
+    min-height: 600px;
     display: grid;
     gap:5px;
     grid-template-columns: repeat(1fr,20);

@@ -120,7 +120,9 @@
 
   .fish {
     width:35vw;
+    min-width: 600px;
     height: 30vw;
+    min-height: 600px;
     display: grid;
     gap:5px;
     grid-template-columns: repeat(1fr,20);
