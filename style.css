@@ -19,8 +19,41 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    background-image: url("./assets/back.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+
   }
 
+  .audio{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top:20px;
+    left:20px;
+    background-color: #6e12d8;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    cursor:pointer;
+  }
+
+  .head{
+    font-size:100px;
+    font-weight:bolder;
+    position: absolute;
+    top :20px;
+    font-family: 'Luckiest guy', cursive;
+    color: #6e12d8;
+    text-shadow:5px 10px 2px rgb(224, 21, 214);
+  }
+  
+  .home{
+    width: 40px;
+    height: 40px;
+    left:80px;
+  }
+  
   .leftCol,.rightCol{
     position:absolute;
     top:0;
@@ -42,10 +75,6 @@
   .container {
     width: 60vw;
     height: 100vh;
-    background-color: #020f1fe7;
-    background-image: url("./assets/back.gif");
-    background-repeat: no-repeat;
-    background-size: 60vw 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-around;
@@ -53,18 +82,20 @@
   }
 
   .container>a{
-      width: 100px;
-      height:100px;
+      width: 150px;
+      height:150px;
       margin: 100px;
-      background-color: rgb(37, 37, 37);
+      background-color: rgb(78, 0, 114);
       display: flex;
       justify-content: center;
       align-items: center;
       text-decoration: none;
       color: beige;
+      font-size: larger;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       border-radius: 8px;
       font-weight: 600;
       background-image: url("./assets/ship.png");
-      background-size: cover;
+      background-size:cover;
+      background-repeat: no-repeat;
   }

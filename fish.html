@@ -9,7 +9,17 @@
     <link rel="stylesheet" href="./fish.css" />
   </head>
   <body>
-      <div class="leftCol"></div>
+      <div class="leftCol">
+        <div class="audio">
+          <audio controls autoplay hidden loop>
+            <source src="./assets/retro.mp3" type="audio/mp3" />
+          </audio>
+          🔊
+        </div>
+        <a class="home audio" href="./index.html">
+          🏠
+        </a>
+      </div>
         <div class="container">
             <div class="fish">
                 <div id="fa" class="block"></div>
@@ -44,7 +54,10 @@
         </div>     
         </div>        
       </div>
-      <div class="rightCol" ></div>
+      <div class="rightCol" >
+        <h1>SCORE:  </h1>
+        <h1 class="score"></h1>
+      </div>
       <div class="ball"></div>
       <div class="ship"><div>
     </div>

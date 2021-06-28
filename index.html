@@ -5,20 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="leftCol"></div>
+    <h1 class="head">Alt Deleted</h1>
+      <div class="audio">
+        <audio controls autoplay hidden loop>
+          <source src="./assets/retro.mp3" type="audio/mp3" />
+        </audio>
+        🔊
+      </div>
+      <a class="home audio" href="./index.html">
+        🏠
+      </a>
     <div class="container">
-        <a id="parrot" href="/parrot.html">LVL 1</a>
-        <a id="fish" href="/fish.html">LVL 2</a>
-        <a id="lion" href="/lion.html">LVL 3</a>
-        <a id="elephant" href="/elephant.html">LVL 4</a>
-        <a id="turtle"></a>
-    </div>      
-    <div class="rightCol"></div>
+      <a id="parrot" href="/parrot.html">LEVEL 1</a>
+      <a id="fish" href="/fish.html">LEVEL 2</a>
+      <a id="lion" href="/lion.html">LEVEL 3</a>
+      <a id="elephant" href="/elephant.html">LEVEL 4</a>
+      <a id="tortise" href="./tortise.html">LEVEL 5</a>
+      <a id="turtle" href="./turtle.html">LEVEL 6</a>
+    </div>
+    <script>
+      const sound = document.querySelector(".audio");
 
-      <script>
-      </script>
+      sound.addEventListener("click", () => {
+        sound.children[0].muted=!sound.children[0].muted;
+      });
+    </script>
   </body>
 </html>
